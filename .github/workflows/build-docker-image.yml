@@ -37,12 +37,8 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
-          tags: |
-            ghcr.io/${{ toLower(github.repository_owner) }}/my-personal:latest
+          tags: ghcr.io/qdd606/my-personal:latest
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=HTTP Server
             org.opencontainers.image.licenses=MIT
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
